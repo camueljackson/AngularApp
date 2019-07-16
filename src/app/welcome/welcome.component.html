@@ -1,0 +1,9 @@
+<input type="text" name="car-color" [(ngModel)]="carColor" />
+<ul>
+  <li *ngFor="let car of cars | color: carColor">
+    <p>Color: {{ car.color }}</p>
+    <p>Name: {{ car.name | uppercase }}</p>
+    <p>Purchase Date: {{ car.purchaseDate | date: 'dd/MMM/yy' }}</p>
+  </li>
+  <button type="button" (click)="addCar()">Add Car</button>
+</ul>
